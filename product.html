@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Карточка товара с подробным описанием.">
     <link rel = "stylesheet" href = "css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
     <script src="js/products.js" defer></script>
     <meta property="og:type" content="website">
     <meta property="og:title" content="Учебный интернет-магазин">
@@ -50,7 +51,20 @@
         </nav>
         <section class="product">
             <div class="product__media">
-                <img class="product__image" src="images/product-1.jpg" alt="Шкаф-купе «Верона»">
+                <img
+                    class="product__image"
+                    src="images/wardrobe-verona.jpg"
+                    srcset="images/wardrobe-verona-480.jpg 480w,
+                            images/wardrobe-verona-640.jpg 640w,
+                            images/wardrobe-verona-960.jpg 960w"
+                    sizes="(max-width: 639px) 100vw,
+                            (max-width: 1023px) 50vw,
+                            33vw"
+                    alt="Шкаф-купе «Верона»"
+                    width="640"
+                    height="480"
+                    loading="lazy"
+                >
                 <span class="product__badge">Новинка</span>
             </div>
 
@@ -61,16 +75,32 @@
                 <a class="button button--primary product__button" href="order.html">Заказать</a>
             </div>
         </section>
-        <table class="product__specs">
-        <caption>Характеристики товара</caption>
-        <thead>
-            <tr>
-            <th>Параметр</th>
-            <th>Значение</th>
-            </tr>
-        </thead>
-        <tbody class="product__specs-body"></tbody>
-        </table>
+        <div class="table-wrapper">
+            <table class="product-table">
+                <caption>Характеристики товара</caption>
+                <thead>
+                <tr>
+                    <th>Параметр</th>
+                    <th>Значение</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Категория</td>
+                    <td>Учебный товар</td>
+                </tr>
+                <tr>
+                    <td>Цена</td>
+                    <td>1000 руб.</td>
+                </tr>
+                <tr>
+                    <td>Наличие</td>
+                    <td>В наличии</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
     </main>
     <footer class = "site-footer">
         <p>&copy; 2026 Учебный проект. Все права защищены.</p>
