@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Каталог товаров учебного интернет-магазина.">
+  <title>Каталог товаров — Учебный интернет-магазин</title>
+  <link rel="stylesheet" href="css/style.css">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Каталог товаров — Учебный интернет-магазин">
+  <meta property="og:description" content="Учебный frontend-проект интернет-магазина.">
+  <meta property="og:image" content="https://kyarlykov.github.io/kr1-html-css-shop/images/preview.jpg">
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="site-header__logo" href="index.html">ShopProject</a>
+
+      <nav class="site-nav" aria-label="Основная навигация">
+        <ul class="site-nav__list">
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="index.html">Главная</a>
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link site-nav__link--active" href="catalog.html">Каталог</a>
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="contacts.html">Контакты</a>
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="index.html#advantages">Преимущества</a>
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="index.html#popular">Популярные товары</a>
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="index.html#contacts">Обратная связь</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-main">
+    <nav class="breadcrumbs" aria-label="Хлебные крошки">
+      <a class="breadcrumbs__link" href="index.html">Главная</a>
+      <span class="breadcrumbs__current">Каталог</span>
+    </nav>
+
+    <section class="section">
+      <h1 class="section__title">Каталог товаров</h1>
+      <p>
+        На этой странице представлен учебный каталог товаров.
+        В дальнейшем здесь будут добавлены фильтры, сортировка и более
+        подробные карточки.
+      </p>
+    </section>
+
+    <section class="catalog-layout">
+      <aside class="catalog-filters">
+        <h2 class="catalog-filters__title">Фильтры</h2>
+
+        <form class="catalog-filters__form" action="#" method="get">
+          <fieldset class="catalog-filters__group">
+            <legend class="catalog-filters__legend">Категория</legend>
+
+            <label class="catalog-filters__label">
+              <input class="catalog-filters__checkbox" type="checkbox" name="category" value="all">
+              Все товары
+            </label>
+
+            <label class="catalog-filters__label">
+              <input class="catalog-filters__checkbox" type="checkbox" name="category" value="popular">
+              Популярные
+            </label>
+
+            <label class="catalog-filters__label">
+              <input class="catalog-filters__checkbox" type="checkbox" name="category" value="new">
+              Новинки
+            </label>
+          </fieldset>
+
+          <fieldset class="catalog-filters__group">
+            <legend class="catalog-filters__legend">Цена</legend>
+
+            <label class="catalog-filters__label" for="price-from">От</label>
+            <input class="catalog-filters__input" id="price-from" name="price-from" type="number" min="0" placeholder="0">
+
+            <label class="catalog-filters__label" for="price-to">До</label>
+            <input class="catalog-filters__input" id="price-to" name="price-to" type="number" min="0" placeholder="5000">
+          </fieldset>
+
+          <button class="button button--primary" type="submit">Применить</button>
+        </form>
+      </aside>
+
+      <section class="catalog-layout__products">
+        <h2 class="section__title">Список товаров</h2>
+        <div class="products-grid">
+          <article class="product-card">
+            <span class="product-card__badge">Новинка</span>
+            <h3 class="product-card__title">Шкаф-купе «Верона»</h3>
+            <p class="product-card__description">Двухдверный шкаф-купе с зеркальной вставкой и двумя ящиками.</p>
+            <p class="product-card__price">Цена: 24 900 руб.</p>
+            <a class="button button--primary product-card__button" href="product.html?id=1">Подробнее</a>
+          </article>
+
+          <article class="product-card">
+            <h3 class="product-card__title">Шкаф распашной «Классик»</h3>
+            <p class="product-card__description">Трёхдверный распашной шкаф с антресолью и штангой для одежды.</p>
+            <p class="product-card__price">Цена: 18 500 руб.</p>
+            <a class="button button--primary product-card__button" href="product.html?id=2">Подробнее</a>
+          </article>
+
+          <article class="product-card">
+            <h3 class="product-card__title">Шкаф-купе «Модерн»</h3>
+            <p class="product-card__description">Трёхдверный шкаф-купе с подсветкой и зеркальной фасадной панелью.</p>
+            <p class="product-card__price">Цена: 32 000 руб.</p>
+            <a class="button button--primary product-card__button" href="product.html?id=3">Подробнее</a>
+          </article>
+
+          <article class="product-card">
+            <span class="product-card__badge">Новинка</span>
+            <h3 class="product-card__title">Шкаф-пенал «Компакт»</h3>
+            <p class="product-card__description">Узкий шкаф-пенал для прихожей или небольшой комнаты.</p>
+            <p class="product-card__price">Цена: 15 900 руб.</p>
+            <a class="button button--primary product-card__button" href="product.html?id=4">Подробнее</a>
+          </article>
+
+          <article class="product-card">
+            <h3 class="product-card__title">Гардеробная система «Люкс»</h3>
+            <p class="product-card__description">Модульная гардеробная система с открытыми секциями и подсветкой.</p>
+            <p class="product-card__price">Цена: 45 000 руб.</p>
+            <a class="button button--primary product-card__button" href="product.html?id=5">Подробнее</a>
+          </article>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Учебный проект. Все права защищены.</p>
+    <p>Дисциплина: Фронтенд и бэкенд разработка</p>
+  </footer>
+  <a class="to-top" href="#" aria-label="Наверх">↑</a>
+</body>
+</html>
