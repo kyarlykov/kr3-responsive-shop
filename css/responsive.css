@@ -232,3 +232,34 @@ body {
 .order-dialog::backdrop {
   background: rgb(0 0 0 / 0.5);
 }
+
+.skip-link {
+    position: absolute;
+    left: 16px;
+    top: -100px;
+    z-index: 1000;
+    padding: 8px 12px;
+    color: #fff;
+    background-color: #111;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+.skip-link:focus,
+.skip-lin:focus-visible {
+    top: 16px;
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-primary, #0057b8);
+  outline-offset: 3px;
+}
+
+.site-nav__link:focus-visible,
+.button:focus-visible,
+.order-form__input:focus-visible,
+.order-form__textarea:focus-visible,
+.order-form__select:focus-visible {
+  outline: 3px solid var(--color-primary, #0057b8);
+  outline-offset: 3px;
+}
