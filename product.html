@@ -14,6 +14,7 @@
     <meta property="og:image" content="https://kyarlykov.github.io/kr1-html-css-shop/images/preview.jpg">
 </head>
 <body>
+    <a class="skip-link" href="#main">Перейти к основному содержимому</a>
     <header class="site-header">
     <div class="site-header__inner">
         <a class="site-header__logo" href="index.html">ShopProject</a>
@@ -43,7 +44,7 @@
     </div>
     </header>
 
-    <main class="page-main">
+    <main id="main" class="page-main">
         <nav class="breadcrumbs" aria-label="Хлебные крошки">
             <a class="breadcrumbs__link" href="index.html">Главная</a>
             <a class="breadcrumbs__link" href="catalog.html">Каталог</a>
@@ -80,21 +81,21 @@
                 <caption>Характеристики товара</caption>
                 <thead>
                 <tr>
-                    <th>Параметр</th>
-                    <th>Значение</th>
+                    <th scope="col">Параметр</th>
+                    <th scope="col">Значение</th>
                 </tr>
                 </thead>
                 <tbody>
                 <tr>
-                    <td>Категория</td>
+                    <th scope="row">Категория</th>
                     <td>Учебный товар</td>
                 </tr>
                 <tr>
-                    <td>Цена</td>
+                    <th scope="row">Цена</th>
                     <td>1000 руб.</td>
                 </tr>
                 <tr>
-                    <td>Наличие</td>
+                    <th scope="row">Наличие</th>
                     <td>В наличии</td>
                 </tr>
                 </tbody>
