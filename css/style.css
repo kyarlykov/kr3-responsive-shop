@@ -3,17 +3,15 @@
    =============================== */
 
 :root {
-  --color-bg: #ffffff;
-  --color-text: #222222;
-  --color-muted: #666666;
-  --color-primary: #0057b8;
-  --color-primary-dark: #003f86;
-  --color-border: #dddddd;
-  --color-surface: #f7f7f7;
-  --color-surface-accent: #eef5ff;
-  --color-danger: #b00020;
-  --color-success: #168a2f;
-  --color-success-bg: #eefaf0;
+  --color-bg: #f0f4f8; /* Очень светлый серо-голубой фон */
+  --color-surface: #ffffff; /* Чистый белый для карточек */
+  --color-surface-accent: #e2e8f0; /* Светло-серый для выделений */
+  --color-primary: #2c7a7b; /* Глубокий бирюзовый / морская волна */
+  --color-primary-dark: #235e5f; /* Темно-бирюзовый при наведении */
+  --color-text: #2d3748; /* Темно-серый, мягче черного */
+  --color-danger: #e53e3e;
+  --color-success: #38a169;
+  --color-success-bg: #f0fff4;
   --color-white: #ffffff;
 
   --space-xs: 4px;
@@ -142,7 +140,7 @@ a:focus-visible {
   max-width: var(--container-width);
   margin: 0 auto var(--space-xl);
   padding: var(--space-xl) var(--space-lg);
-  background-color: var(--color-surface-accent);
+  background: linear-gradient(135deg, var(--color-surface-accent) 0%, var(--color-surface) 40%, rgba(0, 0, 0, 0.18) 100%);
   border-radius: var(--radius-lg);
 }
 
