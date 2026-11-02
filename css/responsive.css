@@ -100,11 +100,17 @@ body {
 
 .product-card {
     min-width: 0;
+    border: 1px solid black;
+}
+
+.product-card:hover {
+    border: 3px solid #2c7a7b;
 }
 
 .product-card__title,
 .product-card__description {
-    overflow-wrap: anywhere
+    overflow-wrap: break-word;
+    word-break: normal;
 }
 
 @media (min-width: 640px) {

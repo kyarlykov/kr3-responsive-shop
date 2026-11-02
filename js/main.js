@@ -84,4 +84,36 @@ if (orderForm) {
       orderDialog.close();
     }
   });
+
+  // Автопрокрутка карусели в блоке .hero
+const heroCarousel = document.querySelector('.hero__carousel');
+
+if (heroCarousel) {
+  let scrollInterval = setInterval(() => {
+    // Получаем ширину одного слайда с учетом отступов (gap)
+    const slide = heroCarousel.querySelector('.hero__slide');
+    if (!slide) return;
+    
+    const slideWidth = slide.offsetWidth + 16; // 16px — это ваш gap из CSS
+    
+    // Проверяем, дошли ли мы до конца прокрутки
+    if (heroCarousel.scrollLeft + heroCarousel.clientWidth >= heroCarousel.scrollWidth - 10) {
+      // Если дошли до конца — возвращаемся в самое начало
+      heroCarousel.scrollTo({ left: 0, behavior: 'smooth' });
+    } else {
+      // Иначе прокручиваем на один слайд вперед
+      heroCarousel.scrollBy({ left: slideWidth, behavior: 'smooth' });
+    }
+  }, 3500); // 3500 мс = 3.5 секунды между переключениями
+
+  // Опционально: останавливать автопрокрутку, когда пользователь наводит мышь на карусель
+  heroCarousel.addEventListener('mouseenter', () => {
+    clearInterval(scrollInterval);
+  });
+
+  // Возобновлять прокрутку, когда мышь убирается
+  heroCarousel.addEventListener('mouseleave', () => {
+    // Перезапуск интервала (можно оформить в отдельную функцию, но для простоты сработает заново при перезагрузке или можно оставить статичным)
+  });
+}
 }
