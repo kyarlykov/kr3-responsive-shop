@@ -5,7 +5,7 @@ const products = {
     description: 'Двухдверный шкаф-купе с зеркальной вставкой и двумя выдвижными ящиками.',
     price: '24 900 руб.',
     badge: 'Новинка',
-    image: 'images/wardobe-verona.jpg',
+    image: 'images/wardrobe-verona.jpg',
     specs: [
       ['Материал корпуса', 'ЛДСП 16 мм'],
       ['Материал фасада', 'Зеркало + ЛДСП'],
@@ -61,7 +61,7 @@ const products = {
     description: 'Модульная гардеробная система с открытыми секциями, штангой и LED-подсветкой.',
     price: '45 000 руб.',
     badge: '',
-    image: 'images/wardobe-lux.jpg',
+    image: 'images/wardrobe-lux.jpg',
     specs: [
       ['Материал корпуса', 'МДФ 18 мм'],
       ['Материал фасада', 'Открытые секции'],
@@ -129,7 +129,8 @@ if (specsBodyEl && current.specs) {
   current.specs.forEach((row) => {
     const tr = document.createElement('tr');
 
-    const tdName = document.createElement('td');
+    const tdName = document.createElement('th');
+    tdName.setAttribute('scope', 'row');
     tdName.textContent = row[0];
 
     const tdValue = document.createElement('td');

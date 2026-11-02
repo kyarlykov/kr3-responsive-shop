@@ -37,16 +37,22 @@ body {
 
 .site-nav__list {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    overflow-x: auto;
     gap: var(--space-sm, 8px);
     padding: 0;
     margin: 0;
     list-style: none;
+    -webkit-overflow-scrolling: touch;
 }
 
 .site-nav__link {
     display: block;
     padding: 12px 16px;
+}
+
+.site-nav__item {
+    flex-shrink: 0;
 }
 
 @media (min-width: 768px) {
@@ -55,13 +61,12 @@ body {
         flex-wrap: wrap;
         align-items: center;
     }
-}
-/*TODO проверить на мобильном экране
-   переделать, если плохо выглядит*/
-.site-header {
-    position: sticky;
-    top: 0;
-    z-index: 100;
+
+    .site-header {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+    }
 }
 
 .hero {
@@ -151,7 +156,7 @@ body {
     display: block;
     width: 100%;
     aspect-ratio: 4 / 3;
-    object-fit: cover;
+    object-fit: contain;
     border-radius: var(--space-md, 8px);
 }
 
